@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+:root{
+    --grey: #333;
+    --white:#fff;
+    --yellow:#deb307;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* HERO SECTION */
+
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.619), rgba(0, 0, 0, 0.619)),url(../src/assets/img/beerhero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    min-height: 70vh;
+    color:var(--white);
+    padding: 5rem;
+}
+
+#hero h2 {
+    font-size: 4rem;
+    text-transform:uppercase;
+    width:45%;
+    margin:5vh 0;
+}
+
+#hero h1{
+    font-size: 6rem;
+    margin-bottom:5vh;
+}
+
+#hero button {
+    background: var(--yellow);
+    font-size: 1.5rem;
+    border:none;
+    padding:.5rem 1rem;
+    border-radius: 5px;
+}
+
+#hero button:hover {
+    background:var(--grey);
+    color:var(--yellow)
+}
+
+
+/* ABOUT SECTION */
+
+#about {
+    background: var(--grey);
+    color: var(--white);
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:5rem;
+    padding:3rem;
+}
+
+#about-pic{
+    margin:2rem;
+}
+
+#about-pic img{
+    width:100%;
+    filter: grayscale(100%);
+}
+
+#about-text{
+    margin:2rem;
+}
+
+#about-text h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.line {
+    margin:.5vh 0;
+    height:2px;
+    width:5rem;
+    background: var(--yellow);
+    border-radius: 2px;
+}
+
+#about-text p {
+    margin:5vh 0;
+    width:70%;
+    line-height:1.5rem;
+
+}
+
+/* EVENTS SECTION */
+
+#events {
+    background: var(--yellow);
+    padding:4rem;
+    text-align: center;
+}
+
+#events p{
+    text-align: left;
+}
+
+#events h4{
+    text-align:left;
+}
+
+#events #event-cards {
+    display:flex;
+    justify-content: space-between;
+}
+
+#entertainment {
+    width:30%;
+}
+
+.image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 35vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: center;
   }
+
+  #events button {
+    background: var(--grey);
+    color: var(--white);
+    font-size: 1rem;
+    border:none;
+    padding:.5rem 1rem;
+    border-radius: 5px;
+    margin:5vh auto 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#events button:hover {
+    background:var(--grey);
+    color:var(--yellow)
 }
