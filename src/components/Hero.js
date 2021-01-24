@@ -3,7 +3,7 @@ const Hero = () => {
         <section id="hero">
             <h2>Herzlich Willkommen bei</h2>
             <h1>Frein's</h1>
-            <button>Events ansehen</button>
+            <a href="#events">Events ansehen</a>
 
 
         </section>

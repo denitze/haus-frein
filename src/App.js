@@ -1,19 +1,33 @@
 import './App.css';
-import About from './components/About';
-import Events from './components/Events';
-import Hero from './components/Hero';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Kegelbahn from './components/Kegelbahn';
+import Eventspage from './components/Eventpage';
+import ContactUs from './components/ContactUs';
 
 
 
 function App() {
 
   return (
-    <main>
-      <Hero />
-      <About />
-      <Events />
-    </main>
+    <Router>
+    <Navigation />
+    <Switch>
+    <Route path="/" exact component={Home}/>
+    <Route path="/events" exact component={Eventspage}/>
+    <Route path="/kegelbahn" exact component={Kegelbahn}/>
+    <Route path="/contact" component={ContactUs} />
+
+    </Switch>
+    <Footer/>
+  </Router>
   );
 }
 

@@ -1,15 +1,23 @@
+import { NavLink} from "react-router-dom";
 
 const Navigation = () => {
     return ( 
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#">Main</a></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </nav>
-        </header>
+        <nav id="navBar">
+            <ul>
+                <li>
+                    <NavLink to="/" exact activeStyle={{color: '#deb307'}}>HOME</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/events" activeStyle={{color: '#deb307'}}>EVENTS</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/kegelbahn" activeStyle={{color: '#deb307'}}>KEGELBAHN</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/contact" activeStyle={{color: '#deb307'}}>CONTACT</NavLink>
+                </li>
+            </ul>
+        </nav>
      );
 }
  

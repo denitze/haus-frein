@@ -1,13 +1,13 @@
-const Card = () => {
+const Card = (props) => {
     return ( 
         <section id="entertainment">
-            <div className="image" style={{backgroundImage:`url(../assets/img/kegeln.jpg)`}}>
-                <h3>Kegelabend</h3>
+            <div className="image" style={{backgroundImage:`url(${props.img})`}}>
+                <h3>{props.eventName}</h3>
             </div>
             <div>
-                <h4 className="date">13.01.2021</h4>
-                <p className="time">Ab 13 Uhr</p>
-                <p className="description">Erlebe Spaß und esse Schnitzel</p>
+                <h4 className="date">{props.eventDate}</h4>
+                <p className="time">{props.eventTime}</p>
+                <p className="description">{props.eventDescription}</p>
             </div>
         </section>
      );
