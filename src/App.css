@@ -13,13 +13,19 @@
 /* 
 NAVIGATION  */
 
-#navBar ul{
+#navBar {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background:var(--grey);
+    padding: 1rem
+}
 
+#navBar .normalNav{
+width:30%;
   display:flex;
   justify-content: space-between;
   list-style-type: none;
-  background:var(--grey);
-  padding:1rem;
 
 }
 
@@ -33,6 +39,44 @@ NAVIGATION  */
 #navBar a:hover {
   color: var(--yellow);
 }
+
+
+
+/* BURGER MENU */
+
+
+
+#Burger {
+    display: none;
+  }
+
+  #Burger div {
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+  }
+  
+  .DIV-1-X {
+    background: white;
+    transform: rotate(45deg);
+  }
+  .DIV-3-X {
+    background:white;
+    transform: rotate(-45deg);
+  }
+  .DIV-MAIN {
+    background: var(--white);
+  }
+  
+  .UL-NavBar {
+    list-style: none;
+    display: none;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+  }
+
 
 
 /* HERO SECTION */
@@ -73,6 +117,12 @@ h1{
     text-decoration: underline;
 }
 
+#map-sec {
+    display:flex;
+    justify-content:space-around;
+    background: var(--grey);
+    color: var(--white)
+}
 
 /* ABOUT SECTION */
 
@@ -132,6 +182,7 @@ h3{
 
 #events .line {
     background: var(--grey);
+    margin-bottom:2rem;
  
 }
 
@@ -141,11 +192,13 @@ h3{
 
 #events h4{
     text-align:left;
+
 }
 
 #events #event-cards {
     display:flex;
     justify-content: space-between;
+    margin:5vh auto;
 }
 
 #entertainment {
@@ -164,7 +217,7 @@ h3{
     text-align: center;
   }
 
-  #events button {
+  #events a {
     background: var(--grey);
     color: var(--white);
     font-size: 1rem;
@@ -174,7 +227,7 @@ h3{
     margin:5vh auto 0;
 }
 
-#events button:hover {
+#events a:hover {
     background:var(--grey);
     color:var(--yellow)
 }
@@ -282,6 +335,7 @@ input, select {
     margin-bottom: 2vh;
     padding:.5rem;
     font-family: 'Yantramanav', sans-serif;
+    border:none;
   }
   
   input[type="submit"] {
@@ -289,13 +343,13 @@ input, select {
     margin-top:2vh;
     color:#fff;
     background:var(--grey);
-    border:none;
   }
   
   textarea {
     padding:.5rem;
     font-family: 'Yantramanav', sans-serif;
     width:100%;
+    border:none;
   }
 
 #touchContact{
@@ -312,6 +366,10 @@ input, select {
     margin-top:1rem;
     display:grid;
     grid-template-columns: 2fr 1fr;
+}
+
+#contact-sec .map-wrapper{
+    width:100%
 }
 /* FOOTER  */
 
@@ -337,3 +395,496 @@ footer div{
 footer div p{
     margin-left:2rem;
 }
+
+#map-sec .map-wrapper{
+    width:50%;
+    padding:2rem;
+}
+
+iframe {
+    border:none;
+    width:100%;
+    height:50vh;
+}
+
+.burger {
+    display: none;
+  }
+
+/* MEDIA QUERIES  */
+@media only screen and (max-width: 1124px) {
+
+/* HOME  */
+#hero {
+    min-height: 50vh;
+    color:var(--white);
+    padding: 2rem;
+}
+
+#hero h2 {
+    font-size: 2rem;
+    text-transform:uppercase;
+    width:50%;
+    margin:5vh 2rem;
+}
+
+h1{
+    font-size: 4rem;
+    margin-bottom:5vh;
+    margin-left:2rem;
+    text-transform: uppercase;
+}
+
+#hero a, #kegelbahn a {
+    font-size: 1rem;
+}
+
+#hero a{
+    margin-left:2rem;
+
+}
+
+  .UL-NavBar {
+    display: block;
+    transform: translateX(100%);
+  }
+
+  .UL-NavBar.open {
+    transform: translateX(0);
+    transition: transform .5s ease-in-out;
+    display: block;
+    flex-flow: column nowrap;
+    background:  rgba(51, 51, 51, 0.865);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    padding-top: 3.5rem;
+  }
+
+  .UL-NavBar li {
+    display: none;
+  }
+  .UL-NavBar.open li {
+    display: block;
+    text-align: center;
+    padding:2rem;
+  }
+
+  
+  .normalNav li {
+    display: none;
+  }
+
+  #Burger {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    z-index: 2;
+  }
+
+
+#about {
+    background: var(--grey);
+    color: var(--white);
+    display:grid;
+    align-items: center;
+    grid-template-columns: 1fr ;
+    gap:0;
+    padding:2rem;
+}
+
+#about-pic{
+display:none;
+}
+
+#about-text{
+    width:100%;
+}
+
+
+h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.line {
+    margin:.5vh 0;
+    height:2px;
+    width:5rem;
+    background: var(--yellow);
+    border-radius: 2px;
+}
+
+#about-text p, #kegelbahn p {
+    margin:5vh 0;
+    width:80%;
+    line-height:1.5rem;
+    font-size: 1.2rem;
+
+}
+
+#covid{
+    font-size: 1.2rem;
+}
+
+#events #event-cards {
+    flex-direction: column;
+    margin:2vh auto 5vh;
+}
+
+#entertainment {
+    width:100%;
+    font-size: 1.2rem;
+}
+
+.image {
+    margin-top:2rem;
+    min-height: 20vh;
+  }
+
+  #events a {
+    font-size: 1.2rem;
+}
+
+#map-sec {
+    display:flex;
+    justify-content:space-around;
+    flex-direction: column-reverse;
+   
+}
+#map-sec .map-wrapper {
+    width:100%;
+    padding:0;
+}
+
+iframe {
+    height:30vh;
+}
+
+#touchContact{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    padding:5vh 0
+}
+
+/* EVENTS  */
+
+.event-hero {
+    min-height: 30vh;
+}
+
+#event-sec h2{
+    padding-bottom:0;
+}
+
+#event-sec #event-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding:2rem;
+}
+
+/* KEGELBAHN  */
+
+.kegel-hero {
+    min-height: 30vh;
+}
+
+#kegelbahn article{
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding:0;
+}
+#kegelbahn article > div{
+    margin-bottom:5vh;
+    padding:3rem;
+}
+
+#kegelbahn article img {
+    width:100%;
+    margin-right:0;
+    height:60vh;
+}
+
+/* CONTACT  */
+
+#contact-sec {
+    background: var(--grey);
+    color: var(--white);
+}
+.contact-hero {
+    min-height: 30vh;
+}
+
+#contact-us {
+    padding:0;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+
+form{
+    width:80%;
+    margin:1rem auto;
+    background: var(--yellow);
+    padding:3rem;
+    color: var(--grey);
+}
+
+}
+
+
+@media only screen and (max-width: 580px) {
+ 
+
+/* HOME  */
+#hero {
+    min-height:30vh;
+}
+
+#hero h2 {
+    font-size: 1.5rem;
+    width:100%;
+    margin:2vh 0;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom:5vh;
+    margin-left:0;
+}
+
+#hero a{
+    margin-left:0;
+}
+
+#about {
+    padding:2rem;
+}
+
+
+#about-text p, #kegelbahn p {
+    width:90%;
+    font-size: 1rem;
+}
+
+#covid{
+    font-size: 1rem;
+}
+
+#events #event-cards {
+    flex-direction: column;
+    margin:2vh auto 5vh;
+}
+
+  #events a {
+    font-size: 1rem;
+}
+
+
+#touchContact{
+    display:flex;
+    flex-direction:column;
+    padding:5vh 3rem;
+}
+
+#operation {
+    margin-top:3rem;    
+}
+
+/* EVENTS  */
+
+.event-hero {
+    min-height: 30vh;
+}
+
+#event-sec h2{
+    padding-bottom:0;
+}
+
+#event-sec #event-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding:2rem;
+}
+
+/* KEGELBAHN  */
+
+.kegel-hero {
+    min-height: 30vh;
+}
+
+#kegelbahn article{
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding:0;
+}
+#kegelbahn article > div{
+    margin-bottom:5vh;
+    padding:3rem;
+}
+
+#kegelbahn article img {
+    width:100%;
+    margin-right:0;
+    height:60vh;
+}
+
+/* CONTACT  */
+
+#contact-sec {
+    background: var(--grey);
+    color: var(--white);
+}
+.contact-hero {
+    min-height: 30vh;
+}
+
+#contact-us {
+    padding:0;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+
+form{
+    width:80%;
+    margin:1rem auto;
+    background: var(--yellow);
+    padding:3rem;
+    color: var(--grey);
+}
+
+
+footer{
+    font-size: .8rem;
+    padding:.8rem;
+  }
+
+footer div p{
+    margin-left:1rem;
+}
+
+
+#kegelbahn article img {
+    height:30vh;
+}
+
+}
+
+@media only screen and (max-width: 376px) {
+ 
+
+/* HOME  */
+#hero {
+    min-height:20vh;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 1.2rem;
+    width:100%;
+    margin:2vh auto;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom:5vh;
+    margin-left:0;
+}
+
+h3 {
+
+    font-size: 1.5rem;
+}
+#hero a{
+    display:none;
+}
+
+#about {
+    padding:2rem;
+}
+
+
+#events #event-cards {
+    flex-direction: column;
+    margin:2vh auto 5vh;
+}
+
+
+#map-sec h2, #contact-sec h2 {
+    font-size: 1.2rem;
+}
+
+/* EVENTS  */
+
+#event-sec #event-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#entertainment {
+    font-size: 1rem;
+}
+
+/* KEGELBAHN  */
+
+.kegel-hero {
+    min-height: 30vh;
+}
+
+#kegelbahn article > div{
+    margin: 0 auto 5vh;
+    padding:3rem;
+}
+
+#kegelbahn article img {
+    display:none;
+}
+
+/* CONTACT  */
+
+#contact-sec {
+    background: var(--grey);
+    color: var(--white);
+}
+.contact-hero {
+    min-height: 30vh;
+}
+
+#contact-us {
+    padding:0;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+
+form{
+    width:70%;
+    margin:1rem auto;
+    background: var(--yellow);
+    padding:3rem;
+    color: var(--grey);
+}
+
+footer{
+    font-size: .5rem;
+  }
+
+footer div p{
+    margin-left:.5rem;
+}
+
+
+    } 
+    
+
+  

@@ -1,12 +1,12 @@
 import { NavLink} from "react-router-dom";
+import Burger from "./Burger";
 
 const Navigation = () => {
     return ( 
         <nav id="navBar">
-            <ul>
-                <li>
-                    <NavLink to="/" exact activeStyle={{color: '#deb307'}}>HOME</NavLink>
-                </li>
+            <NavLink to="/" exact activeStyle={{color: '#deb307'}}>FREIN LOGO</NavLink>
+            <Burger />
+            <ul className="normalNav">
                 <li>
                     <NavLink to="/events" activeStyle={{color: '#deb307'}}>EVENTS</NavLink>
                 </li>

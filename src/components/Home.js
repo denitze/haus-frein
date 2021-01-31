@@ -1,6 +1,7 @@
 import Hero from './Hero';
 import About from './About';
 import Events from './Events';
+import Map from './Map';
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
         <Hero />    
         <About />
         <Events />
+        <Map />
       </main>
      );
 }

@@ -28,7 +28,7 @@ const Events = () => {
                 img="../assets/img/jazz.jpg"/>
                 
             </article>
-            <button>ALLE EVENTS ANZEIGEN</button>
+           <a href="/events">Alle Events anzeigen</a>
         </section>
      );
 }
