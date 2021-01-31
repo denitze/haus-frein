@@ -2,7 +2,7 @@ const ContactUs = () => {
     return ( 
         <section id="contact-sec">
             <div class="contact-hero">
-                <h1>Contact Us</h1>
+                <h1>Kontakt</h1>
             </div>
             <div id="contact-us">
             <article id="touchContact">

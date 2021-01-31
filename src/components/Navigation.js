@@ -14,7 +14,7 @@ const Navigation = () => {
                     <NavLink to="/kegelbahn" activeStyle={{color: '#deb307'}}>KEGELBAHN</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/contact" activeStyle={{color: '#deb307'}}>CONTACT</NavLink>
+                    <NavLink to="/contact" activeStyle={{color: '#deb307'}}>KONTAKT</NavLink>
                 </li>
             </ul>
         </nav>

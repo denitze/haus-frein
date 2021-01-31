@@ -1,4 +1,5 @@
 import Card from './Card';
+import { Link} from "react-router-dom";
 
 const Events = () => {
     return ( 
@@ -28,7 +29,7 @@ const Events = () => {
                 img="../assets/img/jazz.jpg"/>
                 
             </article>
-           <a href="/events">Alle Events anzeigen</a>
+            <Link to="/events">Alle Events anzeigen</Link>
         </section>
      );
 }

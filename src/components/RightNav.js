@@ -21,7 +21,7 @@ const RightNav = (props) => {
           <Link to="/kegelbahn">KEGELBAHN</Link>
         </li>
         <li>
-          <Link to="/contact">CONTACT</Link>
+          <Link to="/contact">KONTAKT</Link>
         </li>
       </ul>
 
